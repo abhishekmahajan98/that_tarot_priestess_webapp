@@ -1,0 +1,119 @@
+.faq {
+    padding: 120px 20px;
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.preTitle {
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent-gold);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.accordionWrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.accordion {
+    background: transparent !important;
+}
+
+.accordion :global(.ant-collapse-item) {
+    border-bottom: 1px solid var(--border-color) !important;
+    margin-bottom: 0;
+}
+
+.accordion :global(.ant-collapse-item:last-child) {
+    border-bottom: none !important;
+}
+
+.accordion :global(.ant-collapse-header) {
+    padding: 24px 16px !important;
+    align-items: center !important;
+}
+
+.accordion :global(.ant-collapse-content-box) {
+    padding: 0 16px 24px !important;
+}
+
+.question {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: var(--transition-smooth);
+}
+
+.accordion :global(.ant-collapse-item-active) .question {
+    color: var(--color-primary-light);
+}
+
+.expandIcon {
+    font-size: 1rem;
+    color: var(--color-accent-gold) !important;
+    transition: var(--transition-smooth);
+}
+
+.answer {
+    font-family: var(--font-ui);
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq {
+        padding: 80px 15px;
+    }
+
+    .accordionWrapper {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .accordion :global(.ant-collapse-header) {
+        padding: 18px 12px !important;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .answer {
+        font-size: 0.95rem;
+    }
+}

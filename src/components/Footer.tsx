@@ -29,7 +29,7 @@ export default function Footer() {
                         </p>
                         <div className={styles.socials}>
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/thattarotpriestess/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
