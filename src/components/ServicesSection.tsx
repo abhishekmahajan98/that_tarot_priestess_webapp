@@ -67,7 +67,7 @@ const containerVariants = {
             staggerChildren: 0.1,
         },
     },
-};
+} as const;
 
 const cardVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -76,10 +76,10 @@ const cardVariants = {
         y: 0,
         transition: {
             duration: 0.5,
-            ease: 'easeOut',
+            ease: [0.25, 0.46, 0.45, 0.94] as const,
         },
     },
-};
+} as const;
 
 export default function ServicesSection() {
     return (
