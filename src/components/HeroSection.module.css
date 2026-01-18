@@ -1,0 +1,341 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    padding: 120px 20px 80px;
+}
+
+/* Animated Gradient Orbs */
+.orb1,
+.orb2,
+.orb3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.orb1 {
+    width: 500px;
+    height: 500px;
+    background: var(--color-primary);
+    top: -10%;
+    right: -10%;
+    animation: float 15s ease-in-out infinite;
+}
+
+.orb2 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-accent-gold);
+    bottom: -5%;
+    left: -5%;
+    animation: float 12s ease-in-out infinite reverse;
+}
+
+.orb3 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-cosmic-purple);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: float 18s ease-in-out infinite;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+/* Floating Tarot Cards */
+.tarotCards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0;
+    margin-bottom: 40px;
+    perspective: 1000px;
+}
+
+.card,
+.cardMain {
+    width: 80px;
+    height: 120px;
+    background: var(--gradient-card);
+    border: 2px solid var(--color-accent-gold);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), var(--shadow-glow-gold);
+    animation: float 4s ease-in-out infinite;
+}
+
+.cardMain {
+    width: 100px;
+    height: 150px;
+    z-index: 2;
+    animation-delay: 0.5s;
+    background: linear-gradient(145deg, var(--color-primary), var(--color-primary-dark));
+    border-color: var(--color-accent-gold);
+}
+
+.card:first-child {
+    animation-delay: 0s;
+}
+
+.card:last-child {
+    animation-delay: 1s;
+}
+
+.cardSymbol {
+    font-size: 2rem;
+    color: var(--color-accent-gold);
+}
+
+.cardMain .cardSymbol {
+    font-size: 2.5rem;
+    color: var(--color-accent-gold);
+    text-shadow: 0 0 20px var(--color-accent-gold);
+}
+
+.preHeadline {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent-gold);
+    margin-bottom: 24px;
+}
+
+.headline {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 28px;
+    color: var(--text-primary);
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subheadline {
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.primaryBtn {
+    background: var(--gradient-accent);
+    color: white;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 18px 42px;
+    border-radius: 40px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 25px rgba(139, 92, 246, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.primaryBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: 0.5s;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 40px rgba(139, 92, 246, 0.5), var(--shadow-glow-purple);
+    color: white;
+}
+
+.primaryBtn:hover::before {
+    left: 100%;
+}
+
+.secondaryBtn {
+    background: transparent;
+    color: var(--color-primary-light);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 16px 40px;
+    border: 2px solid var(--color-primary-light);
+    border-radius: 40px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+}
+
+.secondaryBtn:hover {
+    background: var(--color-primary-light);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-purple);
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scrollLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+}
+
+.scrollLink:hover {
+    color: var(--color-accent-gold);
+}
+
+.scrollIcon {
+    font-size: 1.2rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 15px 60px;
+    }
+
+    .tarotCards {
+        margin-bottom: 30px;
+    }
+
+    .card {
+        width: 60px;
+        height: 90px;
+    }
+
+    .cardMain {
+        width: 75px;
+        height: 110px;
+    }
+
+    .cardSymbol {
+        font-size: 1.5rem;
+    }
+
+    .cardMain .cardSymbol {
+        font-size: 2rem;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .scrollIndicator {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        margin-top: 40px;
+    }
+
+    .orb1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orb2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .orb3 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preHeadline {
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        padding: 14px 28px;
+        font-size: 0.9rem;
+    }
+}
