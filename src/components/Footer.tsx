@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import {
     InstagramOutlined,
+    FacebookOutlined,
     MailOutlined,
     HeartFilled
 } from '@ant-design/icons';
@@ -35,6 +36,15 @@ export default function Footer() {
                                 aria-label="Instagram"
                             >
                                 <InstagramOutlined />
+                            </a>
+                            <a
+                                href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.socialLink}
+                                aria-label="Facebook"
+                            >
+                                <FacebookOutlined />
                             </a>
                             <a
                                 href="mailto:hello@tarotpriestess.com"
@@ -96,7 +106,8 @@ export default function Footer() {
                         © {currentYear} Tarot Priestess. All rights reserved.
                     </p>
                     <p className={styles.madeWith}>
-                        Made with <HeartFilled className={styles.heart} /> and a little magic
+                        Made with <HeartFilled className={styles.heart} /> and a little magic by{' '}
+                        <a href="#" className={styles.creditLink}>Namaste Coding</a>
                     </p>
                 </div>
             </div>

@@ -64,9 +64,95 @@
     justify-content: center;
 }
 
-.imageIcon {
-    font-size: 6rem;
-    filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.4));
+.tarotCard {
+    width: 140px;
+    height: 200px;
+    background: linear-gradient(145deg,
+            rgba(139, 92, 246, 0.2),
+            rgba(30, 14, 58, 0.9));
+    border: 2px solid var(--color-accent-gold);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow:
+        0 0 40px rgba(212, 175, 55, 0.3),
+        0 0 80px rgba(139, 92, 246, 0.2),
+        inset 0 0 40px rgba(212, 175, 55, 0.1);
+    animation: cardFloat 5s ease-in-out infinite;
+}
+
+.tarotCard::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+}
+
+.tarotCard::after {
+    content: '';
+    position: absolute;
+    inset: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 6px;
+}
+
+.cardInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 24px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.cardCorner {
+    font-size: 1rem;
+    color: var(--color-accent-gold);
+    opacity: 0.8;
+}
+
+.cardSymbol {
+    font-size: 3.5rem;
+    color: var(--color-accent-gold);
+    text-shadow: 0 0 30px var(--color-accent-gold);
+    animation: glow 3s ease-in-out infinite;
+}
+
+.cardCornerBottom {
+    font-size: 1rem;
+    color: var(--color-accent-gold);
+    opacity: 0.8;
+}
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px var(--color-accent-gold);
+        opacity: 0.9;
+    }
+
+    50% {
+        text-shadow: 0 0 40px var(--color-accent-gold), 0 0 60px var(--color-primary-light);
+        opacity: 1;
+    }
 }
 
 .floatingCard {

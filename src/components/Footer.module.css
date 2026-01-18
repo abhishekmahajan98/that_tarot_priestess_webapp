@@ -183,6 +183,16 @@
     animation: pulse 1.5s ease-in-out infinite;
 }
 
+.creditLink {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.creditLink:hover {
+    color: var(--color-accent-gold);
+}
+
 @keyframes pulse {
 
     0%,

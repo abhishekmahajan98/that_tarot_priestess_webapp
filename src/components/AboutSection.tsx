@@ -23,7 +23,13 @@ export default function AboutSection() {
                                 <span className={styles.decorSymbol}>☆</span>
                             </div>
                             <div className={styles.imageContent}>
-                                <span className={styles.imageIcon}>🔮</span>
+                                <div className={styles.tarotCard}>
+                                    <div className={styles.cardInner}>
+                                        <span className={styles.cardCorner}>✧</span>
+                                        <span className={styles.cardSymbol}>☆</span>
+                                        <span className={styles.cardCornerBottom}>✧</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className={styles.floatingCard}>

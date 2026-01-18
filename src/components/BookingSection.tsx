@@ -10,12 +10,12 @@ const { TextArea } = Input;
 const { Option } = Select;
 
 const services = [
-    { value: 'single', label: 'Single Card Reading - $25' },
-    { value: 'three-card', label: 'Three Card Spread - $45' },
-    { value: 'celtic-cross', label: 'Celtic Cross Reading - $85' },
-    { value: 'love', label: 'Love & Relationships - $55' },
-    { value: 'career', label: 'Career & Purpose - $55' },
-    { value: 'spiritual', label: 'Spiritual Guidance - $65' },
+    { value: 'single', label: 'Single Card Reading - ₹500' },
+    { value: 'three-card', label: 'Three Card Spread - ₹999' },
+    { value: 'celtic-cross', label: 'Celtic Cross Reading - ₹1,999' },
+    { value: 'love', label: 'Love & Relationships - ₹1,299' },
+    { value: 'career', label: 'Career & Purpose - ₹1,299' },
+    { value: 'spiritual', label: 'Spiritual Guidance - ₹1,499' },
 ];
 
 export default function BookingSection() {

@@ -210,10 +210,7 @@
 }
 
 .scrollIndicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 60px;
 }
 
 .scrollLink {
@@ -304,10 +301,6 @@
     }
 
     .scrollIndicator {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        transform: none;
         margin-top: 40px;
     }
 
