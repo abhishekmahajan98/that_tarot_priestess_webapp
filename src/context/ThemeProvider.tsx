@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { ConfigProvider, theme as antdTheme } from 'antd';
+import { ConfigProvider, App, theme as antdTheme } from 'antd';
 
 type Theme = 'light' | 'dark';
 
@@ -93,7 +93,9 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <ConfigProvider theme={antDesignTheme}>
-        {children}
+        <App>
+          {children}
+        </App>
       </ConfigProvider>
     </ThemeContext.Provider>
   );
