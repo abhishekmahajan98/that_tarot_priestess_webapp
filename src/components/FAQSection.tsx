@@ -73,7 +73,7 @@ export default function FAQSection() {
                                 <MinusOutlined className={styles.expandIcon} /> :
                                 <PlusOutlined className={styles.expandIcon} />
                         }
-                        expandIconPosition="end"
+                        expandIconPlacement="end"
                         items={faqs.map((faq) => ({
                             key: faq.key,
                             label: <span className={styles.question}>{faq.question}</span>,

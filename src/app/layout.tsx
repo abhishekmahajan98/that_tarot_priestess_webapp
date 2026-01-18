@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/context/ThemeProvider";
 import Header from "@/components/Header";
+import CursorTrail from "@/components/CursorTrail";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider>
+          <CursorTrail />
           <Header />
           <main>{children}</main>
         </ThemeProvider>

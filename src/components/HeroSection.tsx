@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from 'antd';
 import { ArrowDownOutlined } from '@ant-design/icons';
 import StarField from './StarField';
 import styles from './HeroSection.module.css';
